@@ -1,0 +1,35 @@
+
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.command()
+async def eko_dom(ctx):
+     await ctx.send('1. Napisz $eko_dom_woda by dowidzieć więcej o oszczędzaniu wody.\n2. Napisz $eko_dom_prąd by dowidzieć więcej o oszczędzaniu prądu.\n3. Napisz $eko_dom_smieci by dowiedzie się więcej o segregacji śmieci. \n 4. Napisz $eko_dom_zakupy by dowidzieć więcej o robieniu zakpuów przyjaznych dla środowiska.\n 5. Napisz $eko_dom_rosliny by dowidzieć więcej o zanieczyszczeniach w domu. \n 6. Napisz $eko_dom_ogrzewanie by dowidzieć więcej o odpowiedzialnym ogrzewaniu domu.')
+@bot.command()
+async def eko_dom_woda(ctx):
+    await ctx.send("Woda jest niezbędna do życia, dlatego powinniśmy korzystać z niej rozsądnie. Warto zakręcać kran podczas mycia zębów, brać krótsze prysznice i naprawiać cieknące krany. Możemy również wykorzystywać deszczówkę do podlewania roślin. Dzięki takim działaniom zmniejszamy zużycie wody i dbamy o zasoby naturalne.")
+@bot.command()
+async def eko_dom_prąd(ctx):
+    await ctx.send("Kolejnym ważnym aspektem ekologii w domu jest oszczędzanie prądu. Należy wyłączać światło, gdy wychodzimy z pomieszczenia, oraz odłączać nieużywane urządzenia elektryczne, jeśli pobierają energię w trybie czuwania. Dobrym rozwiązaniem jest korzystanie z energooszczędnych żarówek LED i urządzeń o wysokiej efektywności energetycznej. Warto również częściej wykorzystywać światło dzienne.")
+@bot.command()
+async def eko_dom_smieci(ctx):
+    await ctx.send("Prawidłowa segregacja śmieci ułatwia recykling i pozwala ponownie wykorzystać wiele surowców. Papier, szkło, metale, tworzywa sztuczne i bioodpady należy wyrzucać do odpowiednich pojemników zgodnie z lokalnymi zasadami. Ważne jest także ograniczanie ilości odpadów, na przykład przez używanie toreb wielorazowych, butelek na wodę i pojemników na żywność. Niepotrzebnych rzeczy nie trzeba od razu wyrzucać – można je naprawić, oddać lub wykorzystać ponownie.")
+@bot.command()
+async def eko_dom_zakupy(ctx):
+    await ctx.send("Podczas zakupów warto wybierać produkty trwałe, lokalne i sezonowe, a także ograniczać kupowanie rzeczy w nadmiernych opakowaniach. Dobrym nawykiem jest przygotowywanie listy zakupów, dzięki której łatwiej uniknąć niepotrzebnych wydatków i marnowania jedzenia. Resztki posiłków można wykorzystać do przygotowania kolejnych dań, a produkty należy przechowywać w odpowiednich warunkach. Dzięki temu oszczędzamy pieniądze i zmniejszamy ilość odpadów.")
+@bot.command()
+async def eko_dom_rosliny(ctx):
+    await ctx.send("Rośliny doniczkowe mogą upiększać wnętrza i poprawiać samopoczucie domowników. Warto regularnie wietrzyć pomieszczenia, dbać o czystość i unikać nadmiernego używania produktów wydzielających intensywne zapachy. Istotne jest również ograniczanie dymu i innych źródeł zanieczyszczeń wewnątrz domu. Dzięki temu możemy stworzyć przyjemniejsze i zdrowsze miejsce do życia.")
+@bot.command()
+async def eko_dom_ogrzewanie(ctx):
+    await ctx.send("Rozsądne korzystanie z ogrzewania pozwala zmniejszyć zużycie energii i ograniczyć emisję zanieczyszczeń. Warto dostosowywać temperaturę do potrzeb domowników, uszczelniać okna i drzwi oraz nie zasłaniać grzejników meblami. Latem można ograniczać nagrzewanie pomieszczeń przez zasłanianie okien w czasie największego nasłonecznienia. Takie rozwiązania sprzyjają zarówno środowisku, jak i domowemu budżetowi.")
+
+
+
+
+bot.run("<token>")
